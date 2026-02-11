@@ -1,0 +1,14 @@
+vare_data_fetcher:
+  module: vare_fetcher
+  class: VareFetcher
+  username: "oma.sahkoposti@esimerkki.fi"
+  password: "Salasana123"
+  
+  # Voit syöttää yhden käyttöpaikan näin:
+  # gsrn: "123456789012345678"
+  # TAI voit syöttää useita käyttöpaikkoja listana:
+  gsrn: 
+    - "123456789012345678" # Koti
+    - "876543210987654321" # Mökkii
+
+  summary_url: "https://vappi.fi/api/v2/servicelocation/user/{user_id}/location/GSRN_{gsrn}?utilityType=ELECTRICITY"
